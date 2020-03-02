@@ -3,8 +3,8 @@ MAINTAINER Karthik Gaekwad
 
 RUN go get github.com/prometheus/client_golang/prometheus
 RUN go get github.com/prometheus/client_golang/prometheus/promhttp
-COPY . /go/src/github.com/karthequian/wishlist
-WORKDIR /go/src/github.com/karthequian/wishlist/auth
+COPY . /go/src/github.com/pvr1/wishlist
+WORKDIR /go/src/github.com/pvr1/wishlist/auth
 RUN go get && go build -o /bin/auth
 
 ENTRYPOINT ["/bin/auth"]
